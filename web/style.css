@@ -1,0 +1,146 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.heading {
+	text-align: center;
+	color: orange;
+	font-size: 30px;
+	margin-top: 0px;
+	padding: 10px;
+}
+
+.textbox {
+	padding: 10px;
+	border: solid 5px #c9c9c9;
+	transition: border 0.3s;
+	border: solid 5px #969696;
+}
+
+#Maincanvas {
+	border: 2px solid #000;
+	position: relative;
+}
+
+#tmp_canvas {
+	cursor: crosshair;
+	border: 2px solid #000;
+	position: absolute;
+}
+
+#tmp_canvasangle {
+	cursor: default;
+	border: 2px solid #000;
+	position: absolute;
+}
+
+.step-list {
+	list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: orange;
+	padding-left: 10px;
+	font-family: Century Gothic;
+}
+
+label {
+	font-family: Century Gothic;
+	font-size: 15px;
+}
+
+#txtarea {
+	font-family:Century Gothic, Times, serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.button {
+	background-color: gray;
+	border-color: #A7C942;
+	min-height: 30px;
+	min-width: 105px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-left:4%;
+	color:white;
+	font-weight: bold;
+}
+
+.button.disabled, .button[disabled], fieldset[disabled] .button {
+	cursor: not-allowed;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	opacity: .65;
+}
+
+.button:hover {
+	border-color: #000000;
+}
+
+#clrButton {
+	margin-top: 20px;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+	background: #00d9ff;
+}
+
+textarea {
+	border:1px dashed #d1c7ac;
+}

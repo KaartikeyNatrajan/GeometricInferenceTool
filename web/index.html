@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="external-dependencies/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="external-dependencies/jasny-bootstrap.css" />
+    <title>Geometric Inference Tool</title>
+  </head>
+  <body style="background:#232b2b">
+    <div class="header" style="background:black" id="header">
+      <h1 class="heading">Geometric Inference Tool</h1>
+      <div class="navbar navbar-default visible-md visible-sm hidden-lg">
+        <button type="button" class="navbar-toggle navbar-toggle-reveal" data-toggle="offcanvas" data-target="#fixd" data-canvas="#fixd">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">Tools</a>
+      </div>
+    </div>
+    <div class="container-fluid">  
+      <div class="container" style="padding-top: 50px">
+        <div id="DrawArea" position="relative">
+          <canvas id="Maincanvas" width="800" height="500" style="background:black"></canvas><br />
+          <br/>
+        </div>
+      </div>
+      <div class="nav" id="button-area">
+        <nav class="navmenu navmenu-default navmenu-fixed-right offcanvas-sm offcanvas-md" id="fixd">
+          <ul class="step-list">
+            <li>
+              <h4>Step 1 : Add Labels to points</h4>    
+            </li>
+            <li>
+              <button class="button" type='button' id='labels' onclick='addlab()'>Add Labels</button>    
+            </li>
+            <li>
+              <h4>Step 2 : Detect Points of Intersection</h4>    
+            </li>
+            <li>
+              <button id="poi" class="button" onclick='detectpoi()'>POI</button>
+            </li>
+            <li>
+              <h4>Step 3 : Process Drawing</h4>
+            </li>
+            <li>
+              <button id="process" class="button" onclick='processdata()'>Process</button>
+            </li>
+            <li>
+              <h4>Step 4 : Specify angle values</h4>
+            </li>
+            <li>
+              <button id="angler" class="button" onclick='angelSubmit()'>Angle values</button>
+            </li>
+            <li>
+              <h4>Step 5 : Submit Canvas</h4>
+            </li>
+            <li>
+              <button id='subbut' class="button" type="button" onclick='sendcanvasdata()' disabled="disabled">Submit Canvas</button>
+            </li>
+            <li>
+              <button class="button" id='clrButton' type="button" onclick='clear_everything()'>Clear</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="idMymodal"></div>
+      <div class="col-md-4 col-md-offset-2" id="AngleArea"></div>
+    </div>
+    <div class="footer" id="footer" style="background:black;position:relative ;"></div>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="external-dependencies/jquery.min.js"></script> 
+    <script src="external-dependencies/jasny-bootstrap.js"></script> 
+    <script type="text/javascript">
+      if($(window).width() < 1530) {
+        var tcan = document.getElementById("tmp_canvas");
+        $('#tmp_canvas').css({'top':$("#Maincanvas").position().top});        
+      }
+    </script>
+  </body>
+</html>
